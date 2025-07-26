@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { MapPin, Navigation, Clock, Map } from "lucide-react";
-import MapComponent from "@/components/MapComponent";
+
 
 interface SearchResult {
   route: string;
@@ -11,6 +11,10 @@ interface SearchResult {
   landmark: string;
   walkingTime: string;
   coordinates: { lat: number; lng: number };
+}
+
+interface SearchSectionProps {
+  onSearchResults: (results: SearchResult[]) => void;
 }
 
 const mockResults: SearchResult[] = [
@@ -30,7 +34,7 @@ const mockResults: SearchResult[] = [
   }
 ];
 
-export default function SearchSection() {
+export default function SearchSection({ onSearchResults }: SearchSectionProps) {
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
@@ -46,7 +50,9 @@ export default function SearchSection() {
         result.route.toLowerCase().includes(from.toLowerCase()) ||
         result.route.toLowerCase().includes(to.toLowerCase())
       );
-      setResults(filteredResults.length > 0 ? filteredResults : mockResults.slice(0, 1));
+      const finalResults = filteredResults.length > 0 ? filteredResults : mockResults.slice(0, 1);
+      setResults(finalResults);
+      onSearchResults(finalResults);
       setIsSearching(false);
     }, 1000);
   };
@@ -103,49 +109,41 @@ export default function SearchSection() {
 
       {/* Results */}
       {results.length > 0 && (
-        <div className="grid lg:grid-cols-2 gap-8">
-          {/* Results List */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold text-foreground">Available Routes</h3>
-            {results.map((result, index) => (
-              <Card key={index} className="p-6 bg-card border-border/50 hover:shadow-lg transition-all duration-300 animate-fade-in">
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <h4 className="text-lg font-semibold text-primary">{result.route}</h4>
-                    <div className="flex items-center text-sm text-muted-foreground">
-                      <Clock className="w-4 h-4 mr-1" />
-                      {result.walkingTime}
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <div className="flex items-start space-x-2">
-                      <MapPin className="w-5 h-5 text-primary mt-0.5" />
-                      <div>
-                        <p className="font-medium text-foreground">{result.pickup}</p>
-                        <p className="text-sm text-muted-foreground">{result.landmark}</p>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex space-x-3 pt-4">
-                    <Button variant="outline" size="sm" className="flex items-center space-x-2">
-                      <Map className="w-4 h-4" />
-                      <span>View on Map</span>
-                    </Button>
-                    <Button variant="secondary" size="sm">
-                      Walking Directions
-                    </Button>
+        <div className="space-y-4">
+          <h3 className="text-xl font-bold text-foreground">Available Routes</h3>
+          {results.map((result, index) => (
+            <Card key={index} className="p-6 bg-card border-border/50 hover:shadow-lg transition-all duration-300 animate-fade-in">
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <h4 className="text-lg font-semibold text-primary">{result.route}</h4>
+                  <div className="flex items-center text-sm text-muted-foreground">
+                    <Clock className="w-4 h-4 mr-1" />
+                    {result.walkingTime}
                   </div>
                 </div>
-              </Card>
-            ))}
-          </div>
-
-          {/* Interactive Map */}
-          <div className="animate-scale-in">
-            <MapComponent searchResult={results[0]} />
-          </div>
+                
+                <div className="space-y-2">
+                  <div className="flex items-start space-x-2">
+                    <MapPin className="w-5 h-5 text-primary mt-0.5" />
+                    <div>
+                      <p className="font-medium text-foreground">{result.pickup}</p>
+                      <p className="text-sm text-muted-foreground">{result.landmark}</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex space-x-3 pt-4">
+                  <Button variant="outline" size="sm" className="flex items-center space-x-2">
+                    <Map className="w-4 h-4" />
+                    <span>View on Map</span>
+                  </Button>
+                  <Button variant="secondary" size="sm">
+                    Walking Directions
+                  </Button>
+                </div>
+              </div>
+            </Card>
+          ))}
         </div>
       )}
     </div>
