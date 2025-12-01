@@ -1,245 +1,424 @@
-🚕 Feremata – Smart Taxi Hub Finder
+markdown
+| Route | Price | Walking Time | Popular |
+|-------|-------|--------------|---------|
+| Lafto → Mexico | 10 Birr | 2 min | ⭐ |
+| Ledata → Mexico | 12 Birr | 3 min | |
+| Bole → Piassa | 15 Birr | 3 min | |
+| Piassa → Merkato | 12 Birr | 2 min | |
+| Bole → Merkato | 20 Birr | 3 min | |
+| Ledata → Bole | 18 Birr | 3 min | |
+But note that the original had two rows of table headers and then the data. We should have one header row and then the data rows.
 
-Find the nearest taxi pickup hub instantly in Addis Ababa
+Similarly, the "Browser Support" table:
 
-Live Demo
- •
-Report Bug
- •
-Request Feature
+markdown
+| Browser | Version | Support |
+|---------|---------|---------|
+| Chrome | 90+ | ✅ Full |
+| Firefox | 88+ | ✅ Full |
+| Safari | 14+ | ✅ Full |
+| Edge | 90+ | ✅ Full |
+| Opera | 76+ | ✅ Full |
+Also, note that the original README has a section with two tables in the "Available Routes" and then a list of coverage areas. We'll keep that.
 
+Additionally, the "Project Stats" section is not a table but a list, which is fine.
 
-📖 About Feremata
+We'll also update the placeholder links for the live demo and issues to be more generic, but since the user didn't provide specific ones, we can leave them as they are or remove the badges. Alternatively, we can replace yourusername with a placeholder and note that they should update it.
 
-Feremata is a smart mobility tool designed to simplify transportation in Addis Ababa.
-It helps commuters find the nearest taxi hub, check prices, get walking directions, and explore interactive city routes—all in one place.
+Given the instructions, I will:
 
-It solves real pain points in the city’s shared taxi system by offering:
+Fix the two tables.
 
-🗺️ Instant taxi hub discovery
+Leave the rest as is, unless there are other obvious issues.
 
-💰 Clear pricing (10–20 birr)
+Let me rewrite the entire README with the corrected tables and minor adjustments for clarity.
 
-🚶 Turn-by-turn walking directions
+Here's the updated README with improved formatting for GitHub:
 
-🎤 Voice-powered route search
+markdown
+# 🚕 Feremata - Smart Taxi Hub Finder
 
-📱 Offline access for hub info
+<div align="center">
 
-🌍 Interactive maps powered by Mapbox
+![Feremata Logo](https://img.shields.io/badge/Feremata-Smart%20Taxi%20Hub%20Finder-blue)
+**Find Your Perfect Taxi Hub in Addis Ababa**
 
-✨ Key Features
-🔍 Smart Route Search
+[![React](https://img.shields.io/badge/React-18.3.1-blue.svg)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.5.3-blue.svg)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-5.4.1-646CFF.svg)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.11-38B2AC.svg)](https://tailwindcss.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-Search by “From” and “To”
+[Live Demo](#) • [Report Bug](https://github.com/yourusername/feremata/issues) • [Request Feature](https://github.com/yourusername/feremata/issues)
 
-Intelligent route matching
+</div>
 
-Voice input (Amharic + English)
+## 📖 About Feremata
 
-Real-time results with pricing
+**Feremata** is a modern web application designed to solve a critical urban mobility challenge in Addis Ababa, Ethiopia. It helps commuters find the nearest taxi pickup points (hubs) for shared routes with transparent pricing, walking directions, and interactive maps.
 
-🗺️ Interactive Maps
+### The Problem We Solve
 
-Mapbox GL integration
+In cities with shared taxi systems, finding the right pickup point can be confusing and time-consuming. Feremata bridges this gap by providing:
 
-User GPS tracking
+- 🗺️ **Instant Location Discovery** - Find taxi hubs in seconds
+- 💰 **Transparent Pricing** - Know your fare before you travel
+- 🧭 **Walking Directions** - Step-by-step guidance to pickup points
+- 🎤 **Voice Input** - Hands-free route searching
+- 📱 **Offline Support** - Access hub information without internet
+- 🌍 **Interactive Maps** - Visualize routes and locations
 
-Walking route visualization
+## ✨ Key Features
 
-💵 Transparent Pricing
+### 🔍 Smart Route Search
+- Search by starting location and destination
+- Intelligent matching algorithm for route suggestions
+- Voice-enabled search for hands-free operation
+- Real-time results with pricing information
 
-Fixed fares per route
+### 🗺️ Interactive Mapping
+- Powered by Mapbox GL for smooth, responsive maps
+- Visual markers for all taxi hubs in Addis Ababa
+- GPS integration for user location tracking
+- Route highlighting and walking path visualization
 
-No hidden or surge fees
+### 💵 Transparent Pricing
+- Fixed fares displayed upfront (10-20 Ethiopian Birr)
+- No hidden fees or surge pricing
+- Price comparison across multiple routes
+- Popular route recommendations
 
-Price comparison options
+### 🚶 Walking Directions
+- Turn-by-turn navigation to pickup points
+- Estimated walking time and distance
+- Landmark-based guidance
+- Integration with Google Maps
 
-🚶 Walking Directions
+### 🎤 Voice Input
+- Browser-based speech recognition
+- Support for Amharic and English
+- Real-time transcription
+- Accessibility-focused design
 
-Step-by-step instructions
+### 📊 Route Analytics
+- 16+ routes covering major areas
+- Popular route highlighting
+- Price statistics and averages
+- Estimated travel durations
 
-Walking time + distance
+## 🚀 Getting Started
 
-Open directly in Google Maps
+### Prerequisites
 
-🎤 Voice Input
+- **Node.js** (v18 or higher) - [Download](https://nodejs.org/)
+- **npm** or **bun** package manager
+- Modern web browser (Chrome, Firefox, Safari, Edge)
 
-Browser-based speech recognition
+### Installation
 
-Real-time transcription
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/feremata.git
+   cd feremata
+Install dependencies
 
-Accessible for all users
-
-🛠️ Tech Stack
-Frontend
-
-React 18 + TypeScript
-
-Vite
-
-Tailwind CSS
-
-shadcn/ui & Radix UI
-
-Lucide Icons
-
-Maps & Location
-
-Mapbox GL
-
-Geolocation API
-
-State & Data
-
-TanStack Query
-
-React Router
-
-Zod
-
-date-fns
-
-Other
-
-Web Speech API
-
-Sonner notifications
-
-🚀 Getting Started
-Prerequisites
-
-Node.js 18+
-
-npm or bun
-
-Modern browser (Chrome recommended)
-
-Installation
-git clone https://github.com/yourusername/feremata.git
-cd feremata
+bash
 npm install
+Start the development server
+
+bash
 npm run dev
+Open your browser
+Navigate to http://localhost:8080
 
-
-Open:
-
-http://localhost:5173
-
-Production Build
+Build for Production
+bash
+# Create optimized production build
 npm run build
-npm run preview
 
-🗂️ Project Structure
+# Preview production build locally
+npm run preview
+🏗️ Project Structure
+text
 feremata/
-├── public/
-│   ├── lovable-uploads/
+├── public/                    # Static assets
+│   ├── lovable-uploads/      # Images and media
 │   ├── favicon.ico
 │   └── robots.txt
 ├── src/
-│   ├── components/
-│   │   ├── ui/
-│   │   ├── SearchSection.tsx
-│   │   ├── MapComponent.tsx
-│   │   ├── PriceCard.tsx
-│   │   ├── VoiceInput.tsx
-│   │   └── WalkingDirections.tsx
-│   ├── data/routes.ts
-│   ├── hooks/
-│   ├── lib/
+│   ├── components/           # React components
+│   │   ├── ui/              # shadcn/ui base components
+│   │   ├── SearchSection.tsx    # Route search interface
+│   │   ├── MapComponent.tsx     # Interactive map
+│   │   ├── PriceCard.tsx        # Pricing display
+│   │   ├── VoiceInput.tsx       # Voice recognition
+│   │   ├── WalkingDirections.tsx # Navigation guide
+│   │   └── FeatureCard.tsx      # Feature highlights
+│   ├── data/
+│   │   └── routes.ts        # Route and pricing data
+│   ├── hooks/               # Custom React hooks
+│   ├── lib/                 # Utility functions
 │   ├── pages/
-│   │   ├── Index.tsx
-│   │   └── NotFound.tsx
-│   ├── App.tsx
-│   ├── main.tsx
-│   └── index.css
+│   │   ├── Index.tsx        # Main landing page
+│   │   └── NotFound.tsx     # 404 page
+│   ├── App.tsx              # App root component
+│   ├── main.tsx             # Application entry
+│   └── index.css            # Global styles
 ├── package.json
-├── vite.config.ts
-└── tailwind.config.ts
+├── vite.config.ts           # Vite configuration
+├── tailwind.config.ts       # Tailwind CSS config
+└── tsconfig.json            # TypeScript config
+🛠️ Technology Stack
+Frontend Framework
+React 18.3.1 - Modern UI library with hooks
 
-🗺️ Available Routes (16)
+TypeScript 5.5.3 - Type-safe JavaScript
 
-Examples:
+Vite 5.4.1 - Lightning-fast build tool
 
+UI & Styling
+Tailwind CSS 3.4.11 - Utility-first CSS framework
+
+shadcn/ui - High-quality React components
+
+Radix UI - Accessible component primitives
+
+Lucide React - Beautiful icon library
+
+Mapping & Location
+Mapbox GL 3.13.0 - Interactive maps
+
+Geolocation API - User location tracking
+
+State Management
+TanStack Query 5.56.2 - Server state management
+
+React Router DOM 6.26.2 - Client-side routing
+
+React Hook Form 7.53.0 - Form handling
+
+Additional Features
+Web Speech API - Voice recognition
+
+date-fns 3.6.0 - Date utilities
+
+Zod 3.23.8 - Schema validation
+
+Sonner - Toast notifications
+
+🗺️ Available Routes
 Route	Price	Walking Time	Popular
-Lafto → Mexico	10 birr	2 min	⭐
-Ledata → Mexico	12 birr	3 min	
-Bole → Piassa	15 birr	3 min	
-Piassa → Merkato	12 birr	2 min	
-Bole → Merkato	20 birr	3 min	
+Lafto → Mexico	10 Birr	2 min	⭐
+Ledata → Mexico	12 Birr	3 min	
+Bole → Piassa	15 Birr	3 min	
+Piassa → Merkato	12 Birr	2 min	
+Bole → Merkato	20 Birr	3 min	
+Ledata → Bole	18 Birr	3 min	
+Coverage Areas:
 
-Coverage Areas: Lafto, Ledata, Bole, Mexico, Piassa, Merkato
+Lafto
+
+Ledata
+
+Bole
+
+Mexico Square
+
+Piassa
+
+Merkato
+
+💡 Usage Examples
+Basic Route Search
+Enter "Lafto" in the "From" field
+
+Enter "Mexico" in the "To" field
+
+Click "Find Pickup Point"
+
+View results with pricing and walking directions
+
+Voice Search
+Click the microphone icon next to input field
+
+Speak your location (e.g., "Lafto")
+
+The app will transcribe and populate the field
+
+Repeat for destination
+
+Walking Directions
+Search for your route
+
+Click "Walking Directions" on result card
+
+Follow turn-by-turn instructions
+
+Open in Google Maps for GPS navigation
+
+🎨 Design System
+Color Palette
+css
+/* Primary Colors */
+--fermata-teal: 166 100% 37%        /* #00B894 */
+--fermata-teal-light: 166 100% 47%  /* #00D9A5 */
+--fermata-yellow: 44 100% 71%       /* #FDCB6E */
+--fermata-yellow-light: 44 100% 81% /* #FEE5B0 */
+Typography
+Font Family: System fonts (Inter, SF Pro, Segoe UI)
+
+Headings: Bold, 2xl-6xl sizes
+
+Body: Regular, sm-lg sizes
+
+Code: Monospace for technical content
+
+Components
+Built with shadcn/ui for consistency
+
+Fully accessible (ARIA compliant)
+
+Responsive design (mobile-first)
+
+Dark mode ready
+
+🔧 Configuration
+Environment Variables
+Create a .env file in the root directory:
+
+env
+# Mapbox Configuration
+VITE_MAPBOX_TOKEN=your_mapbox_token_here
+
+# API Configuration (if applicable)
+VITE_API_URL=https://api.feremata.com
+Mapbox Setup
+Sign up at Mapbox
+
+Create a new access token
+
+Add token to src/components/MapComponent.tsx
+
+📱 Browser Support
+Browser	Version	Support
+Chrome	90+	✅ Full
+Firefox	88+	✅ Full
+Safari	14+	✅ Full
+Edge	90+	✅ Full
+Opera	76+	✅ Full
+Note: Voice input requires browser support for Web Speech API (Chrome, Edge recommended)
 
 🤝 Contributing
+We welcome contributions from the community! Here's how you can help:
 
-We welcome community contributions!
+Ways to Contribute
+🐛 Report bugs and issues
 
-Ways to help:
+💡 Suggest new features
 
-Report bugs
+📝 Improve documentation
 
-Suggest features
+🔧 Submit pull requests
 
-Improve route data
+🌍 Add new routes and locations
 
-Add new hubs
+Development Workflow
+Fork the repository
 
-Improve UI/UX
+Create a feature branch (git checkout -b feature/amazing-feature)
 
-Write documentation
+Commit your changes (git commit -m 'Add amazing feature')
 
-Contribution Steps
-git checkout -b feature/my-feature
-git commit -m "Add new feature"
-git push origin feature/my-feature
+Push to the branch (git push origin feature/amazing-feature)
 
+Open a Pull Request
 
-Open a Pull Request 🚀
+Code Style
+Follow TypeScript best practices
+
+Use ESLint and Prettier for formatting
+
+Write meaningful commit messages
+
+Add comments for complex logic
+
+Test your changes thoroughly
 
 📄 License
-
-This project is licensed under the MIT License.
-See the LICENSE file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 👥 Team
-
-Built with ❤️ to improve urban mobility in Addis Ababa.
+Feremata is built with ❤️ by developers passionate about improving urban mobility in Ethiopia.
 
 Project Lead: Your Name
 
-Contributors: See GitHub contributors list
+Contributors: See all contributors
 
-🗺️ Roadmap
-v1.0 (Current)
+🙏 Acknowledgments
+Lovable.dev - Initial project scaffolding
 
-✅ Route search
-✅ Transparent pricing
-✅ Voice input
-✅ Walking directions
-✅ Interactive maps
+shadcn/ui - Beautiful component library
 
-v2.0 (Planned)
+Mapbox - Mapping infrastructure
 
-🔄 Real-time taxi availability
-🔄 User accounts & favorites
-🔄 Offline map caching
-🔄 Multi-language support
-🔄 Mobile app (iOS/Android)
+Addis Ababa Taxi Drivers - Route data and insights
 
-v3.0 (Future)
+Open Source Community - Amazing tools and libraries
 
-🔮 AI route recommendations
-🔮 Ride-hailing integrations
-🔮 Community route updates
-🔮 Payment integration
-🔮 City-wide expansion
-
-📞 Contact
-
+📞 Contact & Support
 Website: feremata.com
 
 Email: support@feremata.com
 
 Twitter: @feremata
 
-Issues: GitHub Issues Page
+GitHub Issues: Report a bug
+
+🗺️ Roadmap
+Version 1.0 (Current)
+✅ Route search functionality
+
+✅ Interactive maps
+
+✅ Transparent pricing
+
+✅ Voice input
+
+✅ Walking directions
+
+Version 2.0 (Planned)
+🔄 Real-time taxi availability
+
+🔄 User accounts and favorites
+
+🔄 Offline map caching
+
+🔄 Multi-language support (Amharic, Oromo)
+
+🔄 Mobile app (iOS & Android)
+
+Version 3.0 (Future)
+🔮 AI-powered route recommendations
+
+🔮 Integration with ride-hailing services
+
+🔮 Community-driven route updates
+
+🔮 Payment integration
+
+🔮 Expansion to other Ethiopian cities
+
+📊 Project Stats
+Routes: 16 active routes
+
+Coverage: 6 major areas in Addis Ababa
+
+Price Range: 10-20 Ethiopian Birr
+
+Average Walking Time: 2-3 minutes
+
+Components: 50+ React components
+
+Lines of Code: ~5,000+
+
+Made with ❤️ in Addis Ababa, Ethiopia
