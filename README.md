@@ -101,8 +101,6 @@ npm run build
 
 # Preview production build locally
 npm run preview
-🏗️ Project Structure
-text
 feremata/
 ├── public/                    # Static assets
 │   ├── lovable-uploads/      # Images and media
