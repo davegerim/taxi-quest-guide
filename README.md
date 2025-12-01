@@ -1,41 +1,4 @@
 markdown
-| Route | Price | Walking Time | Popular |
-|-------|-------|--------------|---------|
-| Lafto → Mexico | 10 Birr | 2 min | ⭐ |
-| Ledata → Mexico | 12 Birr | 3 min | |
-| Bole → Piassa | 15 Birr | 3 min | |
-| Piassa → Merkato | 12 Birr | 2 min | |
-| Bole → Merkato | 20 Birr | 3 min | |
-| Ledata → Bole | 18 Birr | 3 min | |
-But note that the original had two rows of table headers and then the data. We should have one header row and then the data rows.
-
-Similarly, the "Browser Support" table:
-
-markdown
-| Browser | Version | Support |
-|---------|---------|---------|
-| Chrome | 90+ | ✅ Full |
-| Firefox | 88+ | ✅ Full |
-| Safari | 14+ | ✅ Full |
-| Edge | 90+ | ✅ Full |
-| Opera | 76+ | ✅ Full |
-Also, note that the original README has a section with two tables in the "Available Routes" and then a list of coverage areas. We'll keep that.
-
-Additionally, the "Project Stats" section is not a table but a list, which is fine.
-
-We'll also update the placeholder links for the live demo and issues to be more generic, but since the user didn't provide specific ones, we can leave them as they are or remove the badges. Alternatively, we can replace yourusername with a placeholder and note that they should update it.
-
-Given the instructions, I will:
-
-Fix the two tables.
-
-Leave the rest as is, unless there are other obvious issues.
-
-Let me rewrite the entire README with the corrected tables and minor adjustments for clarity.
-
-Here's the updated README with improved formatting for GitHub:
-
-markdown
 # 🚕 Feremata - Smart Taxi Hub Finder
 
 <div align="center">
