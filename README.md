@@ -101,34 +101,7 @@ npm run build
 
 # Preview production build locally
 npm run preview
-feremata/
-├── public/                    # Static assets
-│   ├── lovable-uploads/      # Images and media
-│   ├── favicon.ico
-│   └── robots.txt
-├── src/
-│   ├── components/           # React components
-│   │   ├── ui/              # shadcn/ui base components
-│   │   ├── SearchSection.tsx    # Route search interface
-│   │   ├── MapComponent.tsx     # Interactive map
-│   │   ├── PriceCard.tsx        # Pricing display
-│   │   ├── VoiceInput.tsx       # Voice recognition
-│   │   ├── WalkingDirections.tsx # Navigation guide
-│   │   └── FeatureCard.tsx      # Feature highlights
-│   ├── data/
-│   │   └── routes.ts        # Route and pricing data
-│   ├── hooks/               # Custom React hooks
-│   ├── lib/                 # Utility functions
-│   ├── pages/
-│   │   ├── Index.tsx        # Main landing page
-│   │   └── NotFound.tsx     # 404 page
-│   ├── App.tsx              # App root component
-│   ├── main.tsx             # Application entry
-│   └── index.css            # Global styles
-├── package.json
-├── vite.config.ts           # Vite configuration
-├── tailwind.config.ts       # Tailwind CSS config
-└── tsconfig.json            # TypeScript config
+
 🛠️ Technology Stack
 Frontend Framework
 React 18.3.1 - Modern UI library with hooks
